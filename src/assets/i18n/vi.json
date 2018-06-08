@@ -158,6 +158,8 @@
     "duplicatedCode_value": "Mã code đã tồn tại",
     "ProductCategoryId": "Tên loại",
 
-    "user_name":"Tài khoản"
+    "user_name":"Tài khoản",
+    "full_name":"Họ tên",
+    "roleName":"Vai trò"
 
 }
