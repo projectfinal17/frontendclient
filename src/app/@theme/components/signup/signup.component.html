@@ -1,0 +1,135 @@
+<div class="modal-header">
+  <h4 class="modal-title">
+
+    <span>{{'signup' | translate }}</span>
+  </h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+
+</div>
+<form #userForm="ngForm" (ngSubmit)="onClickSaveBtn()">
+  <div class="modal-body">
+      <div class="row">
+          <div class="col-sm-6">
+              <div class="form-group">
+                  <label>{{'user_name' | translate }}
+                      <i class="star">*</i>
+                  </label>
+                  <div *ngIf="!isEditMode">
+                      <!-- <input type="text" autofocus class="form-control" required [(ngModel)]="model.userName" name="userName" #userName="ngModel">
+                      <small>
+                          {{ "username_hint" | translate }}
+                      </small>
+                      <small class="form-text error" *ngIf="helperService.isEmptyInput(userName)">
+                          {{ "is_required" | translate }}
+                      </small> -->
+                  </div>
+                  <div *ngIf="isEditMode">
+                      {{model.userName}}
+                  </div>
+              </div>
+          </div>
+          <div class="col-sm-6">
+              <div>
+                  <div class="form-group">
+                      <label>
+                          {{'password' | translate }}
+                          <i class="star">*</i>
+                      </label>
+                  </div>
+                  <div class="input-group">
+                      <!-- <input class="form-control" required type="text" [(ngModel)]="model.password" minlength="8" name="password" #password="ngModel">
+                      <span class="input-group-btn">
+                          <button type="button" title="{{'random_password' | translate}}" class="btn btn-tn btn-primary" (click)="generatePassword()">
+                              <i class="fa fa-random" aria-hidden="true"></i>
+                          </button>
+                      </span> -->
+                  </div>
+                  <!-- <small class="form-text error" *ngIf="helperService.isLessThanMinLength(password)">
+                      {{ "password_min_length_error" | translate }}
+                  </small>
+                  <small class="form-text error" *ngIf="helperService.isEmptyInput(password)">
+                      {{ "is_required" | translate }}
+                  </small>
+                  <small class="form-text text-primary" *ngIf="isClickedGenerateButton">
+                      {{ "need_to_save" | translate }}
+                  </small> -->
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-sm-6">
+              <div class="form-group">
+                  <!-- <label>{{'first_name' | translate }}
+                      <i class="star">*</i>
+                  </label>
+                  <input type="text" class="form-control" required [(ngModel)]="model.firstName" name="firstName" #firstName="ngModel">
+                  <small class="form-text error" *ngIf="helperService.isEmptyInput(firstName)">
+                      {{ "is_required" | translate }}
+                  </small> -->
+              </div>
+          </div>
+          <div class="col-sm-6">
+              <div class="form-group">
+                  <!-- <label>{{'last_name' | translate }}
+                      <i class="star">*</i>
+                  </label>
+                  <input type="text" class="form-control" [(ngModel)]="model.lastName" name="lastName" #lastName="ngModel">
+                  <small class="form-text error" *ngIf="helperService.isEmptyInput(lastName)">
+                      {{ "is_required" | translate }}
+                  </small> -->
+              </div>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-sm-6">
+              <div class="form-group">
+                  <!-- <label>{{'email' | translate }}
+                      <i class="star">*</i>
+                  </label>
+                  <input type="text" class="form-control" required [(ngModel)]="model.email" name="email" #email="ngModel" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+                  <small class="form-text error" *ngIf="helperService.isEmptyInput(email)">
+                      {{ "is_required" | translate }}
+                  </small>
+                  <small class="form-text error" *ngIf="helperService.isWrongInputPattern(email)">
+                      {{ "wrong_email_pattern" | translate }}
+                  </small> -->
+              </div>
+          </div>
+          <div class="col-sm-6">
+              <div class="form-group">
+                  <!-- <label>{{'phone' | translate }}</label>
+                  <input type="text" class="form-control" [(ngModel)]="model.phoneNumber" name="phoneNumber" #phoneNumber="ngModel"> -->
+              </div>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-sm-6">
+              <div class="form-group">
+                  <!-- <label>{{'job_title' | translate }}</label> -->
+                  <!-- <input type="text" class="form-control" [(ngModel)]="model.jobTitle" name="jobTitle" #jobTitle="ngModel"> -->
+              </div>
+          </div>
+          <div class="col-sm-6">
+              <div class="form-group">
+                  <label>
+                      {{'role' | translate }}
+                      <i class="star">*</i>
+                  </label>
+                  <!-- <select class="form-control" [(ngModel)]="selectedRole" name="roleName" #roleName="ngModel">
+                      <option [ngValue]="role" *ngFor="let role of allRoles | sort:'index' ">{{ helperService.toLowercase(role.name) | translate}}</option>
+                  </select> -->
+              </div>
+          </div>
+      </div>
+
+      
+
+  </div>
+  <div class="modal-footer">
+      <button type="submit" class="btn btn-primary" >{{'save' | translate}}</button>
+  </div>
+</form>
