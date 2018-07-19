@@ -6,7 +6,7 @@ import { BaseService } from './base.service';
 @Injectable()
 export class UserService extends BaseService {
   constructor(private childHttp: Http, private childHelperService: HelperService) {
-    super(childHttp, childHelperService, "users");
+    super(childHttp, childHelperService, "UserCustomers");
   }
   async getCurrentUser(): Promise<any> {
     try {
@@ -15,9 +15,10 @@ export class UserService extends BaseService {
       let body = {};
       const response = await this.childHttp.get(`${this.domain}/self`, options)
         .toPromise();
+
       return response.json();
     } catch (error) {
-      this.childHelperService.handleError(error);
+      return null;
     }
   }
   async changeStatus(userId: string, status: boolean): Promise<any> {

@@ -26,7 +26,8 @@ import {
   ThemeSwitcherComponent,
   TinyMCEComponent,
   LoginComponent,
-  SignUpComponent
+  SignUpComponent,
+  PostComponent
   
 } from './components';
 import { CapitalizePipe, PluralPipe, RoundPipe, TimingPipe } from './pipes';
@@ -68,7 +69,8 @@ const COMPONENTS = [
   ThreeColumnsLayoutComponent,
   TwoColumnsLayoutComponent,
   LoginComponent,
-  SignUpComponent
+  SignUpComponent,
+  PostComponent
 ];
 
 const PIPES = [
@@ -93,7 +95,7 @@ const NB_THEME_PROVIDERS = [
   imports: [...BASE_MODULES, ...NB_MODULES],
   exports: [...BASE_MODULES, ...NB_MODULES, ...COMPONENTS, ...PIPES],
   declarations: [...COMPONENTS, ...PIPES],
-  entryComponents:[LoginComponent,SignUpComponent]
+  entryComponents:[LoginComponent,SignUpComponent,PostComponent]
 })
 export class ThemeModule {
   static forRoot(): ModuleWithProviders {

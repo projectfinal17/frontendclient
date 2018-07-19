@@ -70,8 +70,6 @@
     "bill_warehousing":"Đơn Nhập Kho",
 
 
-    "add_supplier":"Tạo nhà cung cấp",
-
     "demo": "Thử nghiệm",
     "add_demo": "Tạo nhà sản xuất",
     "edit_demo": "Sửa nhà sản xuất",
@@ -141,8 +139,9 @@
     "permission_deny": "Truy cập bị từ chối",
     "you_are_banned": "Bạn không có quyền truy cập trang này. Hãy liên hệ với Chủ cửa hàng để thêm quyền truy cập.",
     "billcreate": "Tạo hóa đơn",
-    "job_title": "Chức vụ",
+    "job_title": "Nghề nghiệp",
     "password_min_length_error": "Mật khẩu phải có ít nhất 8 kí tự",
+    "sign_up_success":"Bạn đã đăng kí thành công",
     "wrong_email_partern": "Định dạng email không đúng",
     "wrong_number_partern":"Định dạng số điện thoại không đúng",
     "need_to_save": "Bạn cần phải ghi nhớ mật khẩu này",
@@ -159,7 +158,13 @@
     "ProductCategoryId": "Tên loại",
 
     "user_name":"Tài khoản",
-    "full_name":"Họ tên",
-    "roleName":"Vai trò"
+    "first_name":"Tên",
+    "last_name":"Họ",
+    "roleName":"Vai trò",
+    "wrong_username_or_password" : "Sai tài khoản đăng nhập hoặc mật khẩu",
+    "wrong_email_pattern" : "Định dạng email không đúng",
+    "username_hint" : "Tên tài khoản không thể thay đổi khi đã tạo.",
+
+    "Show_post":"Tin tức cây cảnh"
 
 }

@@ -14,7 +14,7 @@
       <div class="col-sm-12">
           <div class="form-group">
             <label>{{"user_name" | translate }}</label>
-            <input class="form-control" [(ngModel)]="model.userName" name="userName" #userName="ngModel"  >
+            <input type="text" class="form-control" [(ngModel)]="user.userName" name="userName" #userName="ngModel"  >
           </div>
       </div>
     </div>
@@ -23,7 +23,7 @@
           <div class="form-group">
               <label>{{"password" | translate }}</label>
               <input type="password" class="form-control" placeholder="{{'password' | translate }}" 
-              [(ngModel)]="model.userName" name="userName" #userName="ngModel"  >
+              [(ngModel)]="user.password" name="password" #password="ngModel"  >
             </div>
       </div>
     </div>

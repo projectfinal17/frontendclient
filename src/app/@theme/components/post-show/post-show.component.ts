@@ -10,12 +10,12 @@ import { TranslateService } from '@ngx-translate/core';
 // import { HeaderComponent } from '../header/header.component';
 
 @Component({
-    selector: 'login-modal-component',
-    templateUrl: './login.component.html',
+    selector: 'post-show-component',
+    templateUrl: './post-show.component.html',
 
 })
 
-export class LoginComponent {
+export class PostComponent {
     user: any = {
         email: '',
         password: ''

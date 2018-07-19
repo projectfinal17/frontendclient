@@ -37,6 +37,6 @@ export class AuthService {
     this.helperService.removeLocalStorage(CONSTANT.CURRENT_ROLE) ; 
     this.helperService.removeLocalStorage(CONSTANT.USER_PROFILE);
     this.helperService.removeLocalStorage(CONSTANT.VALID_TIMESTAMP);
-    this.router.navigateByUrl("auth");
+    window.location.reload();
   }
 }

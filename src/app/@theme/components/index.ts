@@ -6,3 +6,4 @@ export * from './theme-settings/theme-settings.component';
 export * from './theme-switcher/theme-switcher.component';
 export * from './signup/signup.component';
 export * from './login/login.component';
+export * from './post-show/post-show.component';

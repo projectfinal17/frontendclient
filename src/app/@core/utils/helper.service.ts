@@ -80,6 +80,17 @@ export class HelperService {
     })
     this.toastrService.success(message, title);
   }
+  showSignUpSuccessToast(): void {
+    let title = '';
+    let message = '';
+    this.translateService.get('success').subscribe((res: string) => {
+      title = res;
+    })
+    this.translateService.get('sign_up_success').subscribe((res: string) => {
+      message = res;
+    })
+    this.toastrService.success(message, title);
+  }
   showEditSuccessToast(keyword: string = null): void {
     let title = '';
     let message = '';
@@ -260,10 +271,6 @@ export class HelperService {
   isWrongInputPattern(input) {
     return ((input && input.errors && input.errors.pattern) && input.touched);
   }
-  // isExistCode_supplier(input){
-  //   return
-  // }
-
 
   isShowedColumn(columnName: string, showedColumnList: any) {
     for (let i = 0; i < showedColumnList.length; i++) {
