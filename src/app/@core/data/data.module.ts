@@ -6,13 +6,11 @@ import { RoleService } from 'app/@core/data/role.service';
 import { AccessiblePageService } from 'app/@core/data/accessible-page.service';
 import { StateService } from 'app/@core/data/state.service';
 import { CustomerService } from './customer.service';
-import { ServiceCategoryService } from './serviceCategory.service';
-import { ServiceService } from './service.service';
+import { ProductCategoryService } from './productCategory.service';
 import { OrderService } from './order.service';
 import { SellingServiceService } from './sellingService.service';
-import { BranchService } from './branch.service';
-import { CompanyService } from './company.service';
-import { EmployeeService } from './employee.service';
+import { ProductService } from './product.service';
+import { PostService } from './post.service';
 
 const SERVICES = [
   AuthService,
@@ -20,14 +18,12 @@ const SERVICES = [
   RoleService,
   AccessiblePageService,
   StateService,
-  ServiceService,
-  ServiceCategoryService,
+  ProductService,
+  ProductCategoryService,
   CustomerService,
   OrderService,
   SellingServiceService,
-  BranchService,
-  CompanyService,
-  EmployeeService
+  PostService
 ];
 
 @NgModule({

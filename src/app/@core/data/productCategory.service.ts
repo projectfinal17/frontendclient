@@ -4,30 +4,30 @@ import { Observable } from 'rxjs/Rx';
 import { HelperService } from '../utils/helper.service';
 import {BaseService} from './base.service';
 @Injectable()
-export class ServiceCategoryService extends BaseService {
+export class ProductCategoryService extends BaseService {
 
   constructor( public childHttp: Http, public childHelperService: HelperService) {
-    super(childHttp, childHelperService, 'serviceCategories');
+    super(childHttp, childHelperService, 'productCategories');
   }
 
-  async getAll_Code(): Promise<any> {
-    try {
-      let headers = this.childHelperService.getHeadersRequest();
-      let options = new RequestOptions({ headers: headers });
+  // async getAll_Code(): Promise<any> {
+  //   try {
+  //     let headers = this.childHelperService.getHeadersRequest();
+  //     let options = new RequestOptions({ headers: headers });
 
-      const response = await this.childHttp.get(this.domain + "/getListCode", options)
-        .toPromise();
-      return response.json();
-    } catch (error) {
-      this.childHelperService.handleError(error);
-    }
-  }
+  //     const response = await this.childHttp.get(this.domain + "/getListCode", options)
+  //       .toPromise();
+  //     return response.json();
+  //   } catch (error) {
+  //     this.childHelperService.handleError(error);
+  //   }
+  // }
   async getAllForCustomer(): Promise<any> {
     try {
       let headers = this.childHelperService.getHeadersRequest();
       let options = new RequestOptions({ headers: headers });
 
-      const response = await this.childHttp.get(this.domain + "/ListServiceCategory", options)
+      const response = await this.childHttp.get(this.domain + "/ListProductCategory", options)
         .toPromise();
       return response.json();
     } catch (error) {

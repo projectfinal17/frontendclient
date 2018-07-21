@@ -10,6 +10,7 @@ import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from '../login/login.component';
 import { SignUpComponent } from '../signup/signup.component';
 import { PostComponent } from '../post-show/post-show.component'
+import { CartComponent } from 'app/@theme/components/Cart/cart.component';
 
 @Component({
   selector: 'ngx-header',
@@ -127,6 +128,10 @@ export class HeaderComponent implements OnInit {
   goToHome() {
     this.menuService.navigateHome();
   }
+  ShowYourCart (){
+    const modalRef = this.modalService.open(CartComponent, { backdrop: 'static' , size: 'lg'});
+  }
+
 
 
 }

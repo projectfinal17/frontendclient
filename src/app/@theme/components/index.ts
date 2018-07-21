@@ -7,3 +7,5 @@ export * from './theme-switcher/theme-switcher.component';
 export * from './signup/signup.component';
 export * from './login/login.component';
 export * from './post-show/post-show.component';
+export * from './cart/cart.component';
+export * from './status-card/status-card.component';

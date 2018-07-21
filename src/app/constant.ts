@@ -12,6 +12,9 @@ export const CONSTANT = {
         OWNER: "OWNER",
         USER: "USER",
     },
+
+    VALUES_TRUE :"true",
+    VALUES_FALSE :"false",
     EMAIL_PARTERN: "^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
 
     

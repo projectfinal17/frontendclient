@@ -9,13 +9,15 @@
 
 <!-- <div class="modal-body"> -->
 <div class="modal-body">
-  <div class="row">
+
+  <div class="row" *ngFor="let post of postList ;let i = index">
     <div class="col-sm-4">
-      <img style="height: 200px;width: 100%;" src="http://taimienphi.vn/tmp/cf/aut/hinh-nen-tinh-yeu-2.jpg" alt="">
+      <img [src]="post.image"  alt="">
     </div>
     <div class="col-sm-8">
-      <h2>Nguyen thanh Dinh</h2>
-      <p>lasdkjhadkj ajdlkjasd;la doioqidnal aidjo;ai ada;sdj;adj;as aisjoaishf;aildjas;k;lhl asjd;ashfasf;lashf;a aj;aisfhf;akhf;lasf;aslhf afhj;ashfas</p>
+      <h2>{{ post.tittle }}</h2>
+      <span>{{ post.createdDate }}</span>
+      <p>{{ post.description }}</p>
     </div>
   </div>
 

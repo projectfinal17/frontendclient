@@ -17,7 +17,7 @@ import { TranslateService } from '@ngx-translate/core';
 
 export class LoginComponent {
     user: any = {
-        email: '',
+        userName: '',
         password: ''
     };
     isClickedLoginBtn: boolean = false;

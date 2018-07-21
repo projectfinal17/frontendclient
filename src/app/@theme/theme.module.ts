@@ -39,6 +39,8 @@ import {
 } from './layouts';
 import { DEFAULT_THEME } from './styles/theme.default';
 import { COSMIC_THEME } from './styles/theme.cosmic';
+import { StatusCardComponent } from './components/status-card/status-card.component';
+import { CartComponent } from './components/Cart/cart.component';
 
 const BASE_MODULES = [CommonModule, FormsModule, ReactiveFormsModule];
 
@@ -70,7 +72,9 @@ const COMPONENTS = [
   TwoColumnsLayoutComponent,
   LoginComponent,
   SignUpComponent,
-  PostComponent
+  PostComponent,
+  StatusCardComponent,
+  CartComponent
 ];
 
 const PIPES = [
@@ -95,7 +99,7 @@ const NB_THEME_PROVIDERS = [
   imports: [...BASE_MODULES, ...NB_MODULES],
   exports: [...BASE_MODULES, ...NB_MODULES, ...COMPONENTS, ...PIPES],
   declarations: [...COMPONENTS, ...PIPES],
-  entryComponents:[LoginComponent,SignUpComponent,PostComponent]
+  entryComponents:[LoginComponent,SignUpComponent,PostComponent,StatusCardComponent,CartComponent]
 })
 export class ThemeModule {
   static forRoot(): ModuleWithProviders {
