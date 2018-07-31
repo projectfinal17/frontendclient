@@ -11,6 +11,8 @@ import { LoginComponent } from '../login/login.component';
 import { SignUpComponent } from '../signup/signup.component';
 import { PostComponent } from '../post-show/post-show.component'
 import { CartComponent } from 'app/@theme/components/Cart/cart.component';
+import { ProfileComponent } from '../profile/profile.component';
+import { MyCartComponent } from '../myCart/myCart.component';
 
 @Component({
   selector: 'ngx-header',
@@ -75,8 +77,13 @@ export class HeaderComponent implements OnInit {
       profile = res;
     });
 
+    let myOrder = '';
+    this.translateService.get('myOrder').subscribe((res: string) => {
+      myOrder = res;
+    });
+
     console.log(profile);
-    this.userMenu = [{ title: logout, key: 'LOGOUT' }, { title: profile, key: 'PROFILE' }];
+    this.userMenu = [{ title: logout, key: 'LOGOUT' }, { title: profile, key: 'PROFILE' },{ title: myOrder, key: 'MYORDER' }];
 
   }
 
@@ -106,10 +113,15 @@ export class HeaderComponent implements OnInit {
     if (item.key == 'SIGNUP') {
       const modalRef = this.modalService.open(SignUpComponent, { backdrop: 'static' });
     }
+    if (item.key == 'PROFILE') {
+      const modalRef = this.modalService.open(ProfileComponent, { backdrop: 'static'});
+    }
+    if (item.key == 'MYORDER') {
+      const modalRef = this.modalService.open(MyCartComponent, { backdrop: 'static',size: 'lg'} );
+    }
   }
 
   showPost(model: any ){
-    console.log("hihi");
     const modalRef = this.modalService.open(PostComponent, { backdrop: 'static', size: 'lg' });
     modalRef.componentInstance.editedModel = model;
   }

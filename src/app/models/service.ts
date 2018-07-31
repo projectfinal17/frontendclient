@@ -1,39 +1,38 @@
 export class ProductCart {
-    id: string;
-    productCategoryId: string;
-    name: string;
-    description: string;
-    salePrice: number;
-    amount: number;
+  productId: string;
+  salePrice: number;
+  amount: number;
+  totalMoney: number;
+  name: string;
+  imageUrlList: string;
 
-    constructor() {
-        this.id = '';
-        this.productCategoryId = '';
-        
-      this.amount = 1;
-    }
-    setProductStorage(id: string, productCategoryId: string,
-       amount: number,name: string,
-      description: string,salePrice: number) {
-        this.id = id;
-        this.name = name;
-        this.amount = amount;
-        this.description = description;
-        this.salePrice = salePrice;
-        this.productCategoryId = productCategoryId;
-    }
-    setBeginProductStorage(id: string, productCategoryId: string,
-     name: string,
-     description: string,salePrice: number) {
-       this.id = id;
-       this.name = name;
-       this.description = description;
-       this.salePrice = salePrice;
-       this.productCategoryId = productCategoryId;
+  constructor() {
+    this.productId = '';
+    this.amount = 1;
+  }
+  setProductStorage(productId: string, 
+    salePrice: number , toTalMoney: number,name: string,
+    imageUrlList: string) {
+    this.productId = productId;
+    this.salePrice = salePrice;
+    this.totalMoney = toTalMoney;
+    this.name = name;
+    this.imageUrlList = imageUrlList;
+  }
+  setBeginProductStorage(productId: string, 
+    amount: number, salePrice: number , toTalMoney: number,name: string,
+    imageUrlList: string) {
+    this.productId = productId;
+    this.amount = amount;
+    this.salePrice = salePrice;
+    this.totalMoney = toTalMoney;
+    this.name = name;
+    this.imageUrlList = imageUrlList;
 
-    }
-    setAmout() {
-      this.amount = 1;
-    }
+
+  }
+  setAmout() {
+    this.amount = 1;
+  }
 
 }

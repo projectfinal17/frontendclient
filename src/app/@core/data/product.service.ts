@@ -10,18 +10,6 @@ export class ProductService extends BaseService {
     super(childHttp, childHelperService, 'products');
   }
 
-  // async getAll_Code(): Promise<any> {
-  //   try {
-  //     let headers = this.childHelperService.getHeadersRequest();
-  //     let options = new RequestOptions({ headers: headers });
-
-  //     const response = await this.childHttp.get(this.domain + "/getListCode", options)
-  //       .toPromise();
-  //     return response.json();
-  //   } catch (error) {
-  //     this.childHelperService.handleError(error);
-  //   }
-  // }
   async getAllForCustomer(): Promise<any> {
     try {
       let headers = this.childHelperService.getHeadersRequest();

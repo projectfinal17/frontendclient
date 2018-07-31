@@ -16,7 +16,7 @@
     </div>
     <div class="col-sm-8">
       <h2>{{ post.tittle }}</h2>
-      <span>{{ post.createdDate }}</span>
+      <span>{{ helperService.convertJSONDatetoDayMonthYear(post.createdDate) }}</span>
       <p>{{ post.description }}</p>
     </div>
   </div>

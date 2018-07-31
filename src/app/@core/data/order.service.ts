@@ -10,6 +10,30 @@ export class OrderService extends BaseService {
     super(childHttp, childHelperService, 'orders');
   }
 
+  async getCustomerOrder(): Promise<any> {
+    try {
+      let headers = this.childHelperService.getHeadersRequest();
+      let options = new RequestOptions({ headers: headers });
+      const response = await this.childHttp.get(this.domain+"/listOrderUser", options).toPromise();
+      return response.json();
+    } catch (error) {
+      this.childHelperService.handleError(error);
+    }
+  }
+
+  async changeActiveStatus(id: string, isDeleted: boolean ): Promise<any> {
+    try {
+      let headers = this.childHelperService.getHeadersRequest();
+      let options = new RequestOptions({ headers: headers });
+      let body = {};
+      const response = await this.childHttp.put(`${this.domain}/isDeleted/${id}/${isDeleted}`, body ,  options)
+        .toPromise();
+      return response.json();
+    } catch (error) {
+      this.childHelperService.handleError(error);
+    }
+  }
+
   // async Check_CodeCustomerss(): Promise<any> {
   //   try {
   //     let headers = this.childHelperService.getHeadersRequest();

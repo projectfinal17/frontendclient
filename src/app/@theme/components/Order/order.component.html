@@ -1,0 +1,36 @@
+<div class="modal-header">
+  <h4 class="modal-title">
+    <span>{{'order' | translate }}</span>
+  </h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<form #dataForm="ngForm" (ngSubmit)="onClickConFirmBtn()">
+  <div class="modal-body">
+    <div class="row">
+      <h3>Địa chỉ nhận đơn hàng</h3>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <strong>
+          <span>{{user.name}}</span>
+        </strong>
+      </div>
+      <div class="col-sm-12">
+        <i>Địa chỉ : {{user.address}}</i>
+      </div>
+      <div class="col-sm-12">
+        <i>Số điện thoại : {{user.phoneNumber}}</i>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal-footer">
+    <button type="submit" class="btn btn-primary">{{'conFirm' | translate}}</button>
+  </div>
+
+</form>

@@ -294,5 +294,24 @@ export class HelperService {
       return '';
     }
   }
+  showSuccessToast(titleTranslateKey: string, messageTranslateKey: string) {
+    let translatedSentences;
+    this.translateService.get([titleTranslateKey, messageTranslateKey]).subscribe((res: string) => {
+      translatedSentences = res;
+      this.toastrService.success(translatedSentences[messageTranslateKey], translatedSentences[titleTranslateKey]);
+    });
+  }
+  // hao done
+  showAddSuccessForOrderCustomerToast(): void {
+    let title = '';
+    let message = '';
+    this.translateService.get('successForOrder').subscribe((res: string) => {
+      title = res;
+    })
+    this.translateService.get('add_SuccessForOrder').subscribe((res: string) => {
+      message = res;
+    })
+    this.toastrService.success(message, title);
+  }
 }
 

@@ -36,7 +36,7 @@
 </div>
 
 <div class="row">
-  <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let product of serviceList ;let i = index">
+  <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let product of serviceList ">
     <div class="m-1">
       <img [src]="product.imageUrlList" class="img img-responsive" style="width : 100%" alt="">
       <div class="card-body text-center no-padding">
@@ -48,16 +48,14 @@
             <a>{{ product.name }}</a>
           </strong>
         </h5>
-        <p class="card-text">{{ product.description }}</p>
+        <p class="card-text">{{ (product.isActive ? 'full' : 'stock') | translate }}</p>
         
         <div class="card-footer">
           <span class="left">{{ product.salePrice }}$</span>
           <span class="right">
-            <a placement="top" mdbTooltip="Add to Wishlist" container="body" click="">
-              <i class="fa fa-heart"></i>
-            </a>
-            <a placement="top" mdbTooltip="Add to Wishlist" container="body" click="">
-              <i class="fa fa-shopping-cart"></i>
+            <a style="padding-left: 30px" placement="top" mdbTooltip="Add to Wishlist" container="body" click="">
+              <i class="fa fa-shopping-cart" style="height: 30px; width: 30px;"></i>
+              <!-- <img src="./assets/images/iconCart.png" alt="" (click)="AddLocalCart(product)"> -->
             </a>
           </span>
         </div>

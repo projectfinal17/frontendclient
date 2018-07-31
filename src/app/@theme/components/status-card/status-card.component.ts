@@ -14,8 +14,7 @@ import { Component, Input, Output } from '@angular/core';
       <div class="details">
         <div class="title">{{ title }}</div>
         <div >
-          <div class= "title promotioned">{{price-discount}} </div>
-          <div class= "inline">{{price}} </div>
+          <div class= "title promotioned">{{price}} </div>
         </div>
         <div class="status">{{ on ? 'ON' : 'OFF' }}</div>
       </div>
@@ -27,7 +26,7 @@ import { Component, Input, Output } from '@angular/core';
 export class StatusCardComponent {
 
  @Input() price: number;
- @Input() discount: number;
+ 
   @Input() title: string;
   @Input() type: string;
   @Input() on = true;

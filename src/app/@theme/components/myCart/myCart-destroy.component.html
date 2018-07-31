@@ -1,0 +1,17 @@
+<div class="modal-header">
+    <h4 class="modal-title">
+        <span>{{'Destroy_myCart' | translate }}</span>
+    </h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<form #dataForm="ngForm">
+    <div class="modal-body">
+        <div>{{ 'destroy_myCart_message' | translate}}</div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-hero-secondary" (click)="activeModal.close()">{{'cancel' | translate}}</button>
+        <button type="button" class="btn btn-danger" (click)="onClickDestroyBtn()">{{'destroy' | translate}}</button>
+    </div>
+</form>

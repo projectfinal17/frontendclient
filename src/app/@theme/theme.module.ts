@@ -27,7 +27,10 @@ import {
   TinyMCEComponent,
   LoginComponent,
   SignUpComponent,
-  PostComponent
+  PostComponent,
+  ProfileComponent,
+  MyCartComponent,
+  MyCartDestroyModalComponent,
   
 } from './components';
 import { CapitalizePipe, PluralPipe, RoundPipe, TimingPipe } from './pipes';
@@ -41,6 +44,8 @@ import { DEFAULT_THEME } from './styles/theme.default';
 import { COSMIC_THEME } from './styles/theme.cosmic';
 import { StatusCardComponent } from './components/status-card/status-card.component';
 import { CartComponent } from './components/Cart/cart.component';
+import { OrderComponent } from './components/Order/order.component';
+
 
 const BASE_MODULES = [CommonModule, FormsModule, ReactiveFormsModule];
 
@@ -74,7 +79,11 @@ const COMPONENTS = [
   SignUpComponent,
   PostComponent,
   StatusCardComponent,
-  CartComponent
+  CartComponent,
+  ProfileComponent,
+  MyCartComponent,
+  MyCartDestroyModalComponent,
+  OrderComponent
 ];
 
 const PIPES = [
@@ -99,7 +108,8 @@ const NB_THEME_PROVIDERS = [
   imports: [...BASE_MODULES, ...NB_MODULES],
   exports: [...BASE_MODULES, ...NB_MODULES, ...COMPONENTS, ...PIPES],
   declarations: [...COMPONENTS, ...PIPES],
-  entryComponents:[LoginComponent,SignUpComponent,PostComponent,StatusCardComponent,CartComponent]
+  entryComponents:[LoginComponent,SignUpComponent,PostComponent,StatusCardComponent,CartComponent,
+    ProfileComponent,MyCartComponent,MyCartDestroyModalComponent,OrderComponent]
 })
 export class ThemeModule {
   static forRoot(): ModuleWithProviders {

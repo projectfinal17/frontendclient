@@ -51,9 +51,7 @@ export class LoginComponent {
             // get accessiable storages 
             // var storages = await this.userStorageService.getStoragesByUserId(userProfile.id);
 
-            window.location.reload();
-            console.log("Đăng nhập thành công");
-            
+            window.location.reload();            
 
         } catch (error) {
             let title = '';

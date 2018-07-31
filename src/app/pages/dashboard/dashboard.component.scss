@@ -106,8 +106,9 @@
 }
 .card-text {
   line-height: 20px;
-  height: 60px;
-  overflow: hidden;
+  height: 20px;
+  color: mediumslateblue;
+  // overflow: hidden;
 }
 .card .card-footer {
   background-color: transparent;
@@ -134,3 +135,6 @@
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
+
+
+  
