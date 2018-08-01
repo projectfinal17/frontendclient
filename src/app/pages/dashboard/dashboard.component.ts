@@ -70,7 +70,7 @@ export class DashboardComponent implements OnInit {
              data.salePrice,data.salePrice,data.name,data.imageUrlList);
 
           list.push(newServiceCart);
-          this.helperService.showSuccessToast("Đã thêm vào giỏ hàng", "Thành Công");
+          this.helperService.showSuccessToast("Thành Công", "Đã thêm vào giỏ hàng");
           break;
         }
       }
@@ -83,7 +83,7 @@ export class DashboardComponent implements OnInit {
       newServiceCart1.setProductStorage(data.id, 
         data.salePrice,data.salePrice,data.name,data.imageUrlList);
       list.push(newServiceCart1);
-      this.helperService.showSuccessToast("Đã thêm vào giỏ hàng", "Thành Công");
+      this.helperService.showSuccessToast("Thành Công", "Đã thêm vào giỏ hàng");
     }
     localStorage.setItem("ProductList", JSON.stringify(list));
 

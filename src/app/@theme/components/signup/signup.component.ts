@@ -45,7 +45,6 @@ export class SignUpComponent implements OnInit {
     async onClickSignBtn() {
         this.justClickSignBtn = true;
         setTimeout(async () => {
-            // this.model.roleNames = [this.selece]
             try {
                 let response = await this.usersService.add(this.model);
                 this.helperService.showSignUpSuccessToast();
@@ -59,7 +58,7 @@ export class SignUpComponent implements OnInit {
             }
         }, CONSTANT.SAVE_DELAY_TIME);
         this.justClickSignBtn = false;
-
+        console.log(this.model);
     }
 }
 

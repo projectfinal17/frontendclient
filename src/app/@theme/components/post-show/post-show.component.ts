@@ -29,7 +29,7 @@ export class PostComponent implements OnInit {
 
 
     async getAllPost() {
-        let response = await this.postService.getAll();
+        let response = await this.postService.getAllPost();
         this.postList = response.data;
         console.log(this.postList);
     }

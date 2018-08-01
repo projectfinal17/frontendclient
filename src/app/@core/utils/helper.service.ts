@@ -305,10 +305,10 @@ export class HelperService {
   showAddSuccessForOrderCustomerToast(): void {
     let title = '';
     let message = '';
-    this.translateService.get('successForOrder').subscribe((res: string) => {
+    this.translateService.get('Thành công').subscribe((res: string) => {
       title = res;
     })
-    this.translateService.get('add_SuccessForOrder').subscribe((res: string) => {
+    this.translateService.get('Đặt hàng thành công').subscribe((res: string) => {
       message = res;
     })
     this.toastrService.success(message, title);

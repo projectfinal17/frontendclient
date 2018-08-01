@@ -54,12 +54,12 @@
           <span class="left">{{ product.salePrice }}$</span>
           <span class="right">
             <a style="padding-left: 30px" placement="top" mdbTooltip="Add to Wishlist" container="body" click="">
-              <i class="fa fa-shopping-cart" style="height: 30px; width: 30px;"></i>
+              <i class="fa fa-shopping-cart" ></i>
               <!-- <img src="./assets/images/iconCart.png" alt="" (click)="AddLocalCart(product)"> -->
             </a>
           </span>
         </div>
-        <Button (click)="AddLocalCart(product)">
+        <Button *ngIf="product.isActive" (click)="AddLocalCart(product)">
           Thêm sản phâm vào giỏ hàng
         </Button>
       </div>
