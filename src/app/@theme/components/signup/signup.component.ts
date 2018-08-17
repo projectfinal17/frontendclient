@@ -22,6 +22,7 @@ export class SignUpComponent implements OnInit {
     // roleNames : string;
 
     model: any = {
+        roleName : CONSTANT.ROLES.USER,
         roleNames : [CONSTANT.ROLES.USER]
     };
     isEditMode = false;

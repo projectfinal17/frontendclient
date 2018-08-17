@@ -8,7 +8,7 @@ import { ProductCategoryService } from '../../@core/data/productCategory.service
 import { ProductCart } from '../../models/service';
 import { UserService } from '../../@core/data/user.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { LoginComponent } from '../../@theme/components';
+import { LoginComponent, ShowDetailComponent } from '../../@theme/components';
 
 declare var $: any;
 
@@ -57,8 +57,8 @@ export class DashboardComponent implements OnInit {
     if (list.length != 0) {
       for (let i = 0; i < list.length; i++) {
         if (data.id == list[i].productId) {
-          console.log(data.id);
-          console.log(list[i].productId);
+          // console.log(data.id);
+          // console.log(list[i].productId);
           list[i].amount++;
           list[i].totalMoney = list[i].amount * list[i].salePrice;
           break;
@@ -87,13 +87,13 @@ export class DashboardComponent implements OnInit {
     }
     localStorage.setItem("ProductList", JSON.stringify(list));
 
-    let products = this.helperService.getLocalStorage("ProductList") || [];
-    console.log(products);
+    // let products = this.helperService.getLocalStorage("ProductList") || [];
+    // console.log(products);
 
   }
   getLocalProductCart() {
     let products = this.helperService.getLocalStorage("ProductList");
-    console.log(products);
+    // console.log(products);
 
   }
   getCountLocalProductCart() {
@@ -102,6 +102,11 @@ export class DashboardComponent implements OnInit {
   async getAllService() {
     let response = await this.productService.getAllForCustomer();
     this.serviceList = response.data;
-    console.log(this.serviceList);
+    // console.log(this.serviceList);
+  }
+
+  async ShowDetail(model : any){
+    const modalRef = this.modalService.open(ShowDetailComponent, { backdrop: 'static' });
+    modalRef.componentInstance.editedModel = model;
   }
 }

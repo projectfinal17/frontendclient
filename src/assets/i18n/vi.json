@@ -140,6 +140,8 @@
     "order":"Đặt hàng",
     "conFirm":"Xác nhận",
     "full":"Còn hàng",
-    "stock":"Hết hàng"
+    "stock":"Hết hàng",
+    "ShowDetail":"Hiển thị chi tiết"
+    
 
 }

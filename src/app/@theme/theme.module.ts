@@ -31,6 +31,7 @@ import {
   ProfileComponent,
   MyCartComponent,
   MyCartDestroyModalComponent,
+  ShowDetailComponent,
   
 } from './components';
 import { CapitalizePipe, PluralPipe, RoundPipe, TimingPipe } from './pipes';
@@ -83,7 +84,8 @@ const COMPONENTS = [
   ProfileComponent,
   MyCartComponent,
   MyCartDestroyModalComponent,
-  OrderComponent
+  OrderComponent,
+  ShowDetailComponent
 ];
 
 const PIPES = [
@@ -109,7 +111,7 @@ const NB_THEME_PROVIDERS = [
   exports: [...BASE_MODULES, ...NB_MODULES, ...COMPONENTS, ...PIPES],
   declarations: [...COMPONENTS, ...PIPES],
   entryComponents:[LoginComponent,SignUpComponent,PostComponent,StatusCardComponent,CartComponent,
-    ProfileComponent,MyCartComponent,MyCartDestroyModalComponent,OrderComponent]
+    ProfileComponent,MyCartComponent,MyCartDestroyModalComponent,OrderComponent,ShowDetailComponent]
 })
 export class ThemeModule {
   static forRoot(): ModuleWithProviders {

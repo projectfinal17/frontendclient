@@ -21,7 +21,7 @@ export class OrderService extends BaseService {
     }
   }
 
-  async changeActiveStatus(id: string, isDeleted: boolean ): Promise<any> {
+  async DeletedOrder(id: string, isDeleted: boolean ): Promise<any> {
     try {
       let headers = this.childHelperService.getHeadersRequest();
       let options = new RequestOptions({ headers: headers });

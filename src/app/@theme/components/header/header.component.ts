@@ -49,13 +49,13 @@ export class HeaderComponent implements OnInit {
       let userProfile = await this.userService.getCurrentUser();
       if (userProfile == null) {
         this.isLogin = false;
-        this.getNotLoginMenu(); 
+        this.getNotLoginMenu();
       }
       else {
         this.isLogin = true;
-       this.getIsLoginMenu();
+        this.getIsLoginMenu();
       }
-      
+
       var data = await this.userService.getCurrentUser();
       this.user.name = data.firstName + " " + data.lastName;
       this.user.picture = "./assets/images/plt.jpg";
@@ -72,18 +72,17 @@ export class HeaderComponent implements OnInit {
 
     });
 
-    let profile = '';
-    this.translateService.get('profile').subscribe((res: string) => {
-      profile = res;
-    });
+    // let profile = '';
+    // this.translateService.get('profile').subscribe((res: string) => {
+    //   profile = res;
+    // });
 
     let myOrder = '';
     this.translateService.get('myOrder').subscribe((res: string) => {
       myOrder = res;
     });
 
-    console.log(profile);
-    this.userMenu = [{ title: logout, key: 'LOGOUT' }, { title: profile, key: 'PROFILE' },{ title: myOrder, key: 'MYORDER' }];
+    this.userMenu = [{ title: logout, key: 'LOGOUT' }, { title: myOrder, key: 'MYORDER' }];
 
   }
 
@@ -113,19 +112,19 @@ export class HeaderComponent implements OnInit {
     if (item.key == 'SIGNUP') {
       const modalRef = this.modalService.open(SignUpComponent, { backdrop: 'static' });
     }
-    if (item.key == 'PROFILE') {
-      const modalRef = this.modalService.open(ProfileComponent, { backdrop: 'static'});
-    }
+    // if (item.key == 'PROFILE') {
+    //   const modalRef = this.modalService.open(ProfileComponent, { backdrop: 'static'});
+    // }
     if (item.key == 'MYORDER') {
-      const modalRef = this.modalService.open(MyCartComponent, { backdrop: 'static',size: 'lg'} );
+      const modalRef = this.modalService.open(MyCartComponent, { backdrop: 'static', size: 'lg' });
     }
   }
 
-  showPost(model: any ){
+  showPost(model: any) {
     const modalRef = this.modalService.open(PostComponent, { backdrop: 'static', size: 'lg' });
     modalRef.componentInstance.editedModel = model;
   }
-  
+
 
   toggleSidebar(): boolean {
     this.sidebarService.toggle(true, 'menu-sidebar');
@@ -140,8 +139,8 @@ export class HeaderComponent implements OnInit {
   goToHome() {
     this.menuService.navigateHome();
   }
-  ShowYourCart (){
-    const modalRef = this.modalService.open(CartComponent, { backdrop: 'static' , size: 'lg'});
+  ShowYourCart() {
+    const modalRef = this.modalService.open(CartComponent, { backdrop: 'static', size: 'lg' });
   }
 
 

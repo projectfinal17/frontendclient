@@ -22,5 +22,18 @@ export class ProductService extends BaseService {
       this.childHelperService.handleError(error);
     }
   }
+  async getDetail(id: string): Promise<any> {
+    try {
+      let headers = this.childHelperService.getHeadersRequest();
+      let options = new RequestOptions({ headers: headers });
+
+      const response = await this.childHttp.get(this.domain + "/GetDetailAsync/" + id , options)
+        .toPromise();
+      return response.json();
+    } catch (error) {
+      this.childHelperService.handleError(error);
+    }
+  }
+
 
 }

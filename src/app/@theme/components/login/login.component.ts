@@ -1,4 +1,4 @@
-import { Component ,Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { HelperService } from '../../../@core/utils/helper.service';
 import { AuthService } from '../../../@core/data/auth.service';
@@ -6,7 +6,7 @@ import { UserService } from '../../../@core/data/user.service';
 import { CONSTANT } from '../../../constant';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { TranslateService } from '@ngx-translate/core'; 
+import { TranslateService } from '@ngx-translate/core';
 // import { HeaderComponent } from '../header/header.component';
 
 @Component({
@@ -48,11 +48,9 @@ export class LoginComponent {
             let userProfile = await this.usersService.getCurrentUser();
             this.helperService.setLocalStorage(CONSTANT.USER_PROFILE, userProfile);
             this.helperService.setLocalStorage(CONSTANT.CURRENT_ROLE, userProfile.roleNames[0]);
-            // get accessiable storages 
-            // var storages = await this.userStorageService.getStoragesByUserId(userProfile.id);
-
-            window.location.reload();            
-
+            
+                window.location.reload();
+                
         } catch (error) {
             let title = '';
             let message = '';

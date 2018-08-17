@@ -13,6 +13,8 @@ export * from './profile/profile.component';
 export * from './myCart/myCart.component';
 export * from './myCart/myCart-destroy.component';
 export * from './Order/order.component';
+export * from './ShowDetail/showDetail.component';
+
 
 
 

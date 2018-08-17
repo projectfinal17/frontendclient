@@ -26,7 +26,7 @@ export class MyCartDestroyModalComponent implements OnInit {
     }
     async onClickDestroyBtn() {
         try {
-            await this.orderService.changeActiveStatus(this.model.id, true);
+            await this.orderService.DeletedOrder(this.model.id, true);
             this.helperService.showSuccessToast('success', 'destroy_myCart_successfully');
             this.activeModal.close();
         } catch (error) {

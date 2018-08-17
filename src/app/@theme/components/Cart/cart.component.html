@@ -32,7 +32,7 @@
           </span>
           <span class="input-group-addon bootstrap-touchspin-prefix" style="display: none;"></span>
           <!-- <div class = "form-group"> -->
-            <input type="number" max="10" style="-webkit-appearance: none" class="form-control" required pattern="[0-9]+" id="{{Service.id}}" name ="qualitychange" class="form-control quantity-r2 quantity js-quantity-product"
+            <input type="number" max="100" style="-webkit-appearance: none" class="form-control" required pattern="[0-9]+" id="{{Service.id}}" name ="qualitychange" class="form-control quantity-r2 quantity js-quantity-product"
             (keyup)= "Service.amount = $event.target.value; onKeyUp(Service.id,Service.amount)" autofocus min="0" data-js-qty="" [value]="Service.amount" style="display: block;">
             
           <!-- </div> -->
